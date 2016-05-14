@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Maggies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Picture</th>
+      <th>Remark</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @maggies.each do |maggy| %>
+      <tr>
+        <td><%= maggy.name %></td>
+        <td><%= maggy.description %></td>
+        <td><%= maggy.picture %></td>
+        <td><%= maggy.remark %></td>
+        <td><%= link_to 'Show', maggy %></td>
+        <td><%= link_to 'Edit', edit_maggy_path(maggy) %></td>
+        <td><%= link_to 'Destroy', maggy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Maggie', new_maggy_path %>

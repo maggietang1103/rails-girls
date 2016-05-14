@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @maggy.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @maggy.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @maggy.picture %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @maggy.remark %>
+</p>
+
+<%= link_to 'Edit', edit_maggy_path(@maggy) %> |
+<%= link_to 'Back', maggies_path %>
